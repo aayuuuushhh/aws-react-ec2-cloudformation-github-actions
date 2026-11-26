@@ -68,6 +68,7 @@ jobs: # Jobs in this workflow
         with: # Inputs for the action
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }} # Sandbox access key from repo secrets
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }} # Sandbox secret key from repo secrets
+          aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }} # Required for temporary AWS Academy credentials
           aws-region: ${{ env.AWS_REGION }} # Region from the env block
 
       - name: Validate template # Step name shown in the log
